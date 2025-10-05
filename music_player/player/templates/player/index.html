@@ -1,0 +1,17 @@
+{% extends 'player/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Playlists</h2>
+{% if playlists %}
+  <ul class="playlists">
+    {% for pl in playlists %}
+      <li>
+        <a href="{{ pl.get_absolute_url }}">{{ pl.title }}</a>
+        <small>{{ pl.songs.count }} songs</small>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No playlists yet. <a href="{% url 'player:playlist_create' %}">Create one</a>.</p>
+{% endif %}
+{% endblock %}

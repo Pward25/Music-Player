@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Music Player - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'player/styles.css' %}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1><a href="{% url 'player:index' %}">Music Player</a></h1>
+        <nav>
+          <a href="{% url 'player:playlist_create' %}">Create playlist</a> |
+          <a href="{% url 'player:song_upload' %}">Upload song</a> |
+          <a href="{% url 'player:song_list' %}">All Songs</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>Local development demo — not for production</small>
+      </div>
+    </footer>
+
+    <script src="{% static 'player/player.js' %}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

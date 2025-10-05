@@ -1,0 +1,12 @@
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:#f9f9fb; color:#111; }
+.container { width:95%; max-width:900px; margin: 20px auto; }
+.site-header { background:#222; color:white; padding:10px 0; }
+.site-header a { color:#fff; text-decoration:none; }
+.playlists { list-style: none; padding:0; }
+.playlists li { padding:10px 0; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center; }
+.player-panel { background: #fff; padding: 16px; border-radius:8px; box-shadow: 0 6px 18px rgba(30,30,30,0.05); margin-bottom:12px; }
+.controls { display:flex; gap:8px; align-items:center; margin-top:8px; }
+.progress-wrap { display:flex; gap:8px; align-items:center; margin-top:8px; }
+.song-list { list-style:none; padding:0; }
+.song { padding:8px; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center; }
+.play-song { margin-left:10px; }
